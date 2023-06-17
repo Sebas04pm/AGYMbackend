@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGYM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./multimedia/logo.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="container">
+            <h1 class="navbar-title">AGYM</h1>
+            <ul class="navbar-list">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Acerca de</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="#pricing">Precios</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+    </header><br><br>
+
+<section class="contact">
+    <div class="container">
+      <h3>Contacto</h3>
+      <p>¡Envíanos un mensaje y nos pondremos en contacto contigo pronto!</p>
+      <form action="guardar.php" method="POST">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" name="correo" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea name="mensaje" required></textarea>
+        </div>
+        <button type="submit" value="send">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+<section class="testimonials">
+    <div class="container">
+      <h3>Testimonios de nuestros clientes</h3>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Estoy encantado con los resultados que he obtenido en este gimnasio. El equipo de entrenadores es increíblemente motivador y las instalaciones son de primera categoría."</p>
+                <h4>John Doe</h4>
+                <p class="designation">Cliente satisfecho</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"El ambiente en este gimnasio es muy acogedor y me siento motivado cada vez que vengo aquí. Los entrenadores siempre están dispuestos a ayudar y el equipo es de alta calidad."</p>
+                <h4>Jane Smith</h4>
+                <p class="designation">Cliente comprometida</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"¡Este gimnasio ha cambiado mi vida! He logrado alcanzar mis metas de acondicionamiento físico gracias a los programas personalizados y la atención dedicada de los entrenadores."</p>
+                <h4>Michael Johnson</h4>
+                <p class="designation">Cliente transformado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Gimnasio Fitness. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

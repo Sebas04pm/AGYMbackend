@@ -3,7 +3,11 @@ const path = require('path');
 const morgan = require('morgan');
 const mysql = require('mysql');
 const connection = require('express-myconnection');
+
 const app = express();
+
+// IMPORTANDO RUTAS
+const customerRoutes = require('./routes/customer');
 
 // CONFIGURACIONES
 app.set('port', process.env.PORT || 3000);
@@ -20,7 +24,14 @@ app.use(connection(mysql, {
     database: 'formulario'
 }, 'single'));
 
+// RUTAS
+app.use('/', customerRoutes);
 
+// ARCHIVOS ESTATICOS
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+// INICIANDO EL SERVIDOR
 app.listen(app.get('port'), () => {
     console.log('Servidor conectado en el puerto 3000')
 });
