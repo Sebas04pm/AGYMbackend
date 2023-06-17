@@ -23,6 +23,7 @@ app.use(connection(mysql, {
     port: 3306,
     database: 'formulario'
 }, 'single'));
+app.use(express.urlencoded({extended: false}))
 
 // RUTAS
 app.use('/', customerRoutes);

@@ -13,4 +13,16 @@ controller.list = (req, res) => {
     });
 };
 
+controller.save = (req, res) => {
+    const data = req.body;
+
+    req.getConnection((err, conn)=> {
+        conn.query('INSERT INTO registro set ?', [data], (err, registro) => {
+            console.log(registro);
+            res.send('works')
+        })
+    })
+}
+
+
 module.exports = controller;
