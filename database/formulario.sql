@@ -1,0 +1,17 @@
+-- CREACION DE LA BASE DE DATOS --
+CREATE DATABASE formulario;
+
+-- USANDO LA BASE DE DATOS --
+use formulario;
+
+-- CREACION DE LA TABLA --
+CREATE TABLE registro(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  mensaje TEXT NOT NULL
+);
+
+SHOW TABLES;
+
+describe registro;
