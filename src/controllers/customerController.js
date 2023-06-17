@@ -19,7 +19,7 @@ controller.save = (req, res) => {
     req.getConnection((err, conn)=> {
         conn.query('INSERT INTO registro set ?', [data], (err, registro) => {
             console.log(registro);
-            res.send('works')
+            res.redirect('/');
         })
     })
 }

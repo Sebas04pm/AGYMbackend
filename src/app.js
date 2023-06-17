@@ -8,6 +8,9 @@ const app = express();
 
 // IMPORTANDO RUTAS
 const customerRoutes = require('./routes/customer');
+const paginaRouter = require('./routes/pagina');
+const servicioRouter = require('./routes/servicio');
+const precioRouter = require('./routes/precio');
 
 // CONFIGURACIONES
 app.set('port', process.env.PORT || 3000);
@@ -27,12 +30,20 @@ app.use(express.urlencoded({extended: false}))
 
 // RUTAS
 app.use('/', customerRoutes);
+app.use('/pagina', paginaRouter);
+app.use('/servicio', servicioRouter);
+app.use('/precio', precioRouter);
+
 
 // ARCHIVOS ESTATICOS
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 
 // INICIANDO EL SERVIDOR
 app.listen(app.get('port'), () => {
     console.log('Servidor conectado en el puerto 3000')
 });
+
+
