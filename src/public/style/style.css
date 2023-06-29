@@ -523,9 +523,6 @@ tbody tr td {
   .testimonial-slider {
     text-align: center;
     padding: 70px 0;
-    background: url(/multimedia/R.jpg);
-    background-size: cover;
-    background-position: center;
   }
   
   .testimonial-container {
@@ -621,7 +618,55 @@ tbody tr td {
       max-width: none;
     }
   }
-      
+
+  /* Carrusel de imagenes */
+
+.slider{
+  background: url(/multimedia/R.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-frame {
+  width: 1280px;
+  height: auto;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+
+.slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center; 
+}
+
+.slider-frame img {
+  width: 60%; 
+  max-width: 100%; 
+  object-fit: contain; 
+}
+
+@keyframes slide {
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}      
   /* Estilos del pie de página */
   
   footer {
@@ -665,5 +710,4 @@ tbody tr td {
       padding: 0 10px;
     }
   }
-  
   
