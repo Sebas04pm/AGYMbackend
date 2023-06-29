@@ -65,21 +65,21 @@
         <div class="testimonial-container">
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <p class="testimonial-text">"Estoy encantado con los resultados que he obtenido en este gimnasio. El equipo de entrenadores es increíblemente motivador y las instalaciones son de primera categoría."</p>
+              <p class="testimonial-text">"Estoy encantado con los resultados que he obtenido en este gimnasio."</p>
               <h4 class="testimonial-author">John Doe</h4>
               <p class="testimonial-designation">Cliente satisfecho</p>
             </div>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <p class="testimonial-text">"El ambiente en este gimnasio es muy acogedor y me siento motivado cada vez que vengo aquí. Los entrenadores siempre están dispuestos a ayudar y el equipo es de alta calidad."</p>
+              <p class="testimonial-text">"El ambiente en este gimnasio es muy acogedor."</p>
               <h4 class="testimonial-author">Jane Smith</h4>
               <p class="testimonial-designation">Cliente comprometida</p>
             </div>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <p class="testimonial-text">"He logrado alcanzar mis metas de acondicionamiento físico gracias a los programas personalizados y la atención dedicada de los entrenadores."</p>
+              <p class="testimonial-text">"He logrado alcanzar mi cambio físico, exelente."</p>
               <h4 class="testimonial-author">Michael Johnson</h4>
               <p class="testimonial-designation">Cliente transformado</p>
             </div>
@@ -92,65 +92,66 @@
       </section>
       
       
-  
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Gimnasio Fitness. Todos los derechos reservados.</p>
-    </div><br>
-    <div>
-        <ul class="redesSociales">
-            <li><a href="https://instagram.com/sebas04_pm?igshid=ZDdkNTZiNTM="><ion-icon name="logo-instagram"></ion-icon></a></li>
-            <li><a href="https://www.facebook.com/sebastian.paredes.50702769?mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li><a href="https://www.youtube.com/channel/UCIjOERp4qNPS3Ylauxq6gHA"><ion-icon name="logo-youtube"></ion-icon></a></li>
-        </ul>
-    </div>
-  </footer>
+          
+<footer>
+  <div class="container">
+    <p>&copy; 2023 Gimnasio Fitness. Todos los derechos reservados.</p>
+  </div><br>
+  <div>
+    <ul class="redesSociales">
+      <li><a href="https://instagram.com/sebas04_pm?igshid=ZDdkNTZiNTM="><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li><a href="https://www.facebook.com/sebastian.paredes.50702769?mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="https://www.youtube.com/channel/UCIjOERp4qNPS3Ylauxq6gHA"><ion-icon name="logo-youtube"></ion-icon></a></li>
+    </ul>
+  </div>
+</footer>
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
-    // Importar Swiper
-  const testimonialCards = document.querySelectorAll('.testimonial-card');
-  const prevButton = document.querySelector('.testimonial-prev');
-  const nextButton = document.querySelector('.testimonial-next');
+      // Importar Swiper
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const prevButton = document.querySelector('.testimonial-prev');
+    const nextButton = document.querySelector('.testimonial-next');
   
-  let currentSlide = 0;
+    let currentSlide = 0;
   
-  // Función para mostrar el slide actual
-  function showSlide(index) {
-    testimonialCards.forEach((card, i) => {
-      if (i === index) {
-        card.classList.add('active');
-      } else {
-        card.classList.remove('active');
+    // Función para mostrar el slide actual
+    function showSlide(index) {
+      testimonialCards.forEach((card, i) => {
+        if (i === index) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+    }
+  
+    // Función para avanzar al siguiente slide
+    function nextSlide() {
+      currentSlide++;
+      if (currentSlide >= testimonialCards.length) {
+        currentSlide = 0;
       }
-    });
-  }
-  
-  // Función para avanzar al siguiente slide
-  function nextSlide() {
-    currentSlide++;
-    if (currentSlide >= testimonialCards.length) {
-      currentSlide = 0;
+      showSlide(currentSlide);
     }
-    showSlide(currentSlide);
-  }
   
-  // Función para retroceder al slide anterior
-  function prevSlide() {
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = testimonialCards.length - 1;
+    // Función para retroceder al slide anterior
+    function prevSlide() {
+      currentSlide--;
+      if (currentSlide < 0) {
+        currentSlide = testimonialCards.length - 1;
+      }
+      showSlide(currentSlide);
     }
+  
+    // Event Listeners para los botones de control
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+  
+    // Mostrar el primer slide al cargar la página
     showSlide(currentSlide);
-  }
-  
-  // Event Listeners para los botones de control
-  prevButton.addEventListener('click', prevSlide);
-  nextButton.addEventListener('click', nextSlide);
-  
-  // Mostrar el primer slide al cargar la página
-  showSlide(currentSlide);
   </script>
-</body>
+
 </body>
 </html>
