@@ -1,9 +1,9 @@
-const EjsWebpackPlugin = require('ejs-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-    entry: "./src/app.js",
+    entry: './src/app.js',
     output: {
-        path: __dirname +'/dist',
-        filename:'bundle.js' 
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     }
 }
